@@ -500,9 +500,9 @@ body {
 }
 
 @media (max-width: 768px) {
-  .app-container {
+  /* .app-container {
     padding: 30px 15px;
-  }
+  } */
   
   .intro-text h3 {
     font-size: 36px;
