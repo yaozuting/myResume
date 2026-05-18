@@ -1,12 +1,13 @@
 import creditVideo from "./assets/credit_taiwan.mp4"
-import rentalTWVideo from "./assets/credit_taiwan.mp4"
-import rentalJBVideo from "./assets/rental_johor.mp4"
-import dcf from "./assets/rental_johor.mp4"
-import propertySwiper from "./assets/property_swiper.mp4"
+import rentalTWVideo from "./assets/rental_TW.mp4"
+import residentialJBVideo from "./assets/residential_johor.mp4"
+import dcf from "./assets/DCF_broadcom.mp4"
 
-import catImg from "./assets/cat.avif"
+
+
 import uniImg from "./assets/uni.png"
 import hsImg from "./assets/highschool.png"
+import profileImg from './assets/profile_image.jpeg'
 
 
 
@@ -14,6 +15,7 @@ export type introduction = {
     name:string
     email : string 
     phone : string
+    graduation_date:string 
     brief_intro : string 
     profile_pic?:string 
 }
@@ -90,10 +92,17 @@ export const myProfile: profileSchema = {
   introduction: {
     name: "Ting Yao Zu",
     email: "yaozu04@gmail.com",
-    phone: "+886 0984588946",
+    phone: "(+886) 984588946",
+    graduation_date : '2026/06',
     brief_intro:
-      "Final-year Finance student at National Taiwan University with a strong interest in data-driven financial analysis. Passionate about investment research and using data to uncover actionable insights. Eager to bridge academic knowledge with practical application in real-world financial decision-making.",
-    profile_pic: catImg,
+       `
+I am a final-year Finance student at National Taiwan University with a strong interest in investment banking. Over the past four years, I have developed a solid foundation in financial markets, accounting, and investment analysis, while also building practical skills through projects involving financial modeling, market research, and data analytics.
+
+Beyond academics, I enjoy combining finance with technology to analyze companies and market trends using tools such as Excel, VBA, Python, and Power BI. From building discounted cash flow models to developing interactive market dashboards and property analytics projects, I am passionate about transforming raw data into actionable insights.
+
+I am eager to apply both my financial knowledge and analytical mindset in a professional environment, particularly in roles involving valuation, strategic analysis, and transaction execution within the capital markets.
+`,
+    profile_pic: profileImg,
   },
 
   educations: {
@@ -156,16 +165,16 @@ export const myProfile: profileSchema = {
         url: "https://skill-progress-production.up.railway.app/progress?image=https://brandlogos.net/wp-content/uploads/2025/04/microsoft_power_bi-logo_brandlogos.net_1gwgj-512x667.png&level=3",
       },
       {
-        name: "SQL",
-        url: "https://skill-progress-production.up.railway.app/progress?image=https://png.pngtree.com/png-vector/20220726/ourmid/pngtree-design-a-uiux-app-logo-with-a-sql-database-icon-vector-png-image_25084656.png&level=3",
-      },
-      {
         name: "Power Point",
         url: "https://skill-progress-production.up.railway.app/progress?image=https://www.logo.wine/a/logo/Microsoft_PowerPoint/Microsoft_PowerPoint-Logo.wine.svg&level=2",
       },
       {
         name:'Microsoft Word',
         url:"https://skill-progress-production.up.railway.app/progress?image=https://download.logo.wine/logo/Microsoft_Word/Microsoft_Word-Logo.wine.png&level=2",
+      },
+      {
+        name:'Bloomberg Terminal',
+        url:"https://skill-progress-production.up.railway.app/progress?image=https://logos-world.net/wp-content/uploads/2022/01/Bloomberg-Emblem.png&level=2",
       }
     ],
   },
@@ -181,6 +190,15 @@ export const myProfile: profileSchema = {
           isDownload : true
         }
       },
+        {
+        name: "Bloomberg Market Concepts",
+        secured_year: "2026-04-13",
+        views : {
+          view: "./certs/bloomberg market concepts.pdf",
+          viewText : 'Download the File',
+          isDownload : true
+        }
+      },
       {
         name: "Virtual Experience Program in “Commercial Banking” by Forage",
         secured_year: "2025-01-20",
@@ -191,25 +209,29 @@ export const myProfile: profileSchema = {
         }
 
       },
-      {
-        name: " Virtual Experience Program in “Sustainability in Banking” by Forage",
-        secured_year: "2025-06-10",
-        views : {
-          view: "./certs/Sustainability in Banking.pdf",
-          viewText : 'Download the File',
-          isDownload : true
-        }
-      },
+    
     ],
   },
 
   sideProjects: {
     list_project: [
       {
-        name: "Credit Card Market of Taiwan ",
-        labels: ["Excel", "Macro", "Pivot Table", "Dashboard"],
+        name: "Discounted Cash Flow of AVGO",
+        labels: ["Excel", "Functions","Financial Model"],
         brief_summary:
-          "Built a web dashboard that visualizes company financial metrics, valuation ratios, and historical trends for retail investors.",
+  "Built a discounted cash flow model for Broadcom (AVGO) in Excel, using financial statement inputs, forecast assumptions, and valuation functions to estimate intrinsic value. The model walks through revenue projections, margin assumptions, free cash flow calculation, discounting, and terminal value analysis.",
+        pic: dcf,
+          views:{
+          view:"/files/DCF_broadcom.",
+          viewText : "Download the File",
+          isDownload:true
+        }
+      },
+      {
+        name: "Credit Card Market of Taiwan",
+        labels: ["Excel", "VBA", "Pivot Table", "Dashboard"],
+        brief_summary:
+  "Built an interactive Excel dashboard analyzing Taiwan’s credit card market using Pivot Tables, VBA automation, and dynamic visualizations. The project provides insights into transaction trends,and consumer spending behavior through automated data processing and user-friendly dashboard interactions.",
         pic: creditVideo,
         views:{
           view:"/files/credit_taiwan.xlsm",
@@ -219,9 +241,10 @@ export const myProfile: profileSchema = {
       },
       {
         name: "Taiwan Rental Market Analysis ",
-        labels: ["Excel", "Macro", "Pivot Table", "Dashboard"],
+        labels: ["Excel", "VBA", "Pivot Table", "Dashboard"],
         brief_summary:
-          "Created a data analysis project to compare rental prices across different districts and identify market patterns.",
+
+  "An Excel dashboard analyzing Taiwan’s rental market with VBA, Pivot Tables, and interactive visuals using data sourced from Sinyi Realty Inc. The project explores rental price patterns, regional differences, property characteristics, and affordability trends.",
         pic: rentalTWVideo,
           views:{
           view:"/files/rental_taiwan.xlsm",
@@ -230,41 +253,30 @@ export const myProfile: profileSchema = {
         }
       },
       {
-        name: "Johor Rental Market Analysis ",
+        name: "Residential Market in Johor",
         labels: ["PowerBi", "Dashboard"],
         brief_summary:
-          "Created a data analysis project to compare rental prices across different districts and identify market patterns.",
-        pic: rentalJBVideo,
+          "Prompted by my sister’s interest in the Johor residential market, I built an end-to-end property market analysis project using Python and Power BI. Property data was extracted from PropertyGuru, cleaned and transformed to handle inconsistencies, duplicates, and outliers, before being visualized in an interactive Power BI dashboard showcasing pricing trends, regional differences, and market insights.",
+        pic: residentialJBVideo,
           views:{
-          view:"/files/rental_johor.pbix",
+          view:"/files/residential_johor_dashboard.pbix",
           viewText : "Download the File",
           isDownload:true
         }
       },
-       {
-        name: "Discounted Cash Flow of Broadcom.inc",
-        labels: ["Excel", "Functions","Financial Model"],
-        brief_summary:
-          "Created a data analysis project to compare rental prices across different districts and identify market patterns.",
-        pic: dcf,
-          views:{
-          view:"/files/rental_johor.pbix",
-          viewText : "Download the File",
-          isDownload:true
-        }
-      },
-      {
-        name: "Property Swiper",
-        labels: ["Typescript", "Python",'CSS'],
-        brief_summary:
-          "Created a data analysis project to compare rental prices across different districts and identify market patterns.",
-        pic: propertySwiper,
-          views:{
-          view:"",
-          viewText : "View the File",
-          isDownload:false
-        }
-      },
+
+      // {
+      //   name: "Property Swiper",
+      //   labels: ["Typescript", "Python",'CSS'],
+      //   brief_summary:
+      //     "Created a data analysis project to compare rental prices across different districts and identify market patterns.",
+      //   pic: propertySwiper,
+      //     views:{
+      //     view:"",
+      //     viewText : "View the File",
+      //     isDownload:false
+      //   }
+      // },
     
     ],
   },

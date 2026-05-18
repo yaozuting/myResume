@@ -15,6 +15,10 @@ function Introduction({ input }: { input: introduction }) {
         <span className="material-symbols-outlined">phone_in_talk</span>
         <span>{input.phone}</span>
       </p>
+       <p>
+        <span className="material-symbols-outlined">school</span>
+        <span>Graduation: {input.graduation_date}</span>
+      </p>
       <h4>About Me</h4>
       <p>{input.brief_intro}</p>
     </div>
