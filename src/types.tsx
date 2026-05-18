@@ -96,7 +96,7 @@ export const myProfile: profileSchema = {
     graduation_date : '2026/06',
     brief_intro:
        `
-I am a final-year Finance student at National Taiwan University with a strong interest in investment banking. Over the past four years, I have developed a solid foundation in financial markets, accounting, and investment analysis, while also building practical skills through projects involving financial modeling, market research, and data analytics.
+I am a final-year Finance student at National Taiwan University with a strong interest in finance world. Over the past four years, I have developed a solid foundation in financial markets, accounting, and investment analysis, while also building practical skills through projects involving financial modeling, market research, and data analytics.
 
 Beyond academics, I enjoy combining finance with technology to analyze companies and market trends using tools such as Excel, VBA, Python, and Power BI. From building discounted cash flow models to developing interactive market dashboards and property analytics projects, I am passionate about transforming raw data into actionable insights.
 
