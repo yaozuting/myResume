@@ -100,7 +100,7 @@ I am a final-year Finance student at National Taiwan University with a strong in
 
 Beyond academics, I enjoy combining finance with technology to analyze companies and market trends using tools such as Excel, VBA, Python, and Power BI. From building discounted cash flow models to developing interactive market dashboards and property analytics projects, I am passionate about transforming raw data into actionable insights.
 
-I am eager to apply both my financial knowledge and analytical mindset in a professional environment, particularly in roles involving valuation, strategic analysis, and transaction execution within the capital markets.
+I am eager to apply both my financial knowledge and analytical mindset in a professional environment.
 `,
     profile_pic: profileImg,
   },
