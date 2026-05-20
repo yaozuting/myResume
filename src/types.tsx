@@ -95,12 +95,12 @@ export const myProfile: profileSchema = {
     phone: "(+886) 984588946",
     graduation_date : '2026/06',
     brief_intro: [
-      "I am a final-year Finance student at National Taiwan University with a strong interest in finance. Over the past four years, I have developed a solid understanding of financial markets, accounting, and investment analysis, while also building practical skills through projects involving financial modeling, market research, and data analytics.",
+  "I am a final-year Finance student at National Taiwan University with a strong interest in financial markets and investment analysis. Over the past four years, I have built a solid foundation in finance, accounting, and market research through both academic learning and hands-on projects.",
 
-      "Beyond academics, I enjoy combining finance with technology to analyze companies and market trends using tools such as Excel, VBA, Python, and Power BI. From building discounted cash flow models to developing interactive market dashboards and property analytics projects, I am passionate about transforming raw data into actionable insights.",
+  "Beyond academics, I enjoy exploring and learning new tools such as Excel, VBA, Python, and Power BI, and applying them to financial-related projects. I have worked on projects involving discounted cash flow valuation, interactive dashboards, and property market analytics, which strengthened my ability to turn raw data into meaningful insights.",
 
-      "I look forward to the opportunity to apply and further develop my financial knowledge in a professional environment."
-    ],
+  "I look forward to applying and further developing my financial and analytical skills in a professional environment."
+],
     profile_pic: profileImg,
   },
 
