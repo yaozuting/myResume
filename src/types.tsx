@@ -99,7 +99,7 @@ export const myProfile: profileSchema = {
 
   "Beyond academics, I enjoy exploring and learning new tools such as Excel, VBA, Python, and Power BI, and applying them to financial-related projects. I have worked on projects involving discounted cash flow valuation, interactive dashboards, and property market analytics, which strengthened my ability to turn raw data into meaningful insights.",
 
-  "I look forward to applying and further developing my financial and analytical skills in a professional environment."
+  "I look forward for the opportunity to apply and further developing my financial and analytical skills in a professional environment."
 ],
     profile_pic: profileImg,
   },
