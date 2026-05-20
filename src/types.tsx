@@ -2,7 +2,7 @@ import creditVideo from "./assets/credit_taiwan.mp4"
 import rentalTWVideo from "./assets/rental_TW.mp4"
 import residentialJBVideo from "./assets/residential_johor.mp4"
 import dcf from "./assets/DCF_broadcom.mp4"
-
+import MYEquityResearcher from './assets/my_llm.mp4'
 
 
 import uniImg from "./assets/uni.png"
@@ -16,7 +16,7 @@ export type introduction = {
     email : string 
     phone : string
     graduation_date:string 
-    brief_intro : string 
+    brief_intro : string[] 
     profile_pic?:string 
 }
 
@@ -68,7 +68,7 @@ export type certifications = {
 export type project ={ 
     name : string 
     labels : string[]
-    brief_summary : string 
+    brief_summary : string[]
     pic : string 
     views : view
 }
@@ -94,14 +94,12 @@ export const myProfile: profileSchema = {
     email: "yaozu04@gmail.com",
     phone: "(+886) 984588946",
     graduation_date : '2026/06',
-    brief_intro:
-       `
-I am a final-year Finance student at National Taiwan University with a strong interest in finance world. Over the past four years, I have developed a solid foundation in financial markets, accounting, and investment analysis, while also building practical skills through projects involving financial modeling, market research, and data analytics.
+    brief_intro:["I am a final-year Finance student at National Taiwan University with a strong interest in finance world.Over the past four years, I have developed a solid understanding in financial markets, accounting, and investment analysis, while also building practical skills through projects involving financial modeling, market research, and data analytics.",
 
-Beyond academics, I enjoy combining finance with technology to analyze companies and market trends using tools such as Excel, VBA, Python, and Power BI. From building discounted cash flow models to developing interactive market dashboards and property analytics projects, I am passionate about transforming raw data into actionable insights.
+,"Beyond academics, I enjoy combining finance with technology to analyze companies and market trends using tools such as Excel, VBA, Python, and Power BI.From building discounted cash flow models to developing interactive market dashboards and property analytics projects, I am passionate about transforming raw data into actionable insights.",
 
-I am eager to apply both my financial knowledge and analytical mindset in a professional environment.
-`,
+,"I look forward to the opportunity to apply and further develop my financial knowledge in a professional environment."]
+,
     profile_pic: profileImg,
   },
 
@@ -111,7 +109,7 @@ I am eager to apply both my financial knowledge and analytical mindset in a prof
         school_name: "National Taiwan University",
         duration: "2022/9- Present",
         course:"Department of Finance",
-        result : "CGPA : 4.05",
+        result : "CGPA : 3.94 / 4.30",
         img:uniImg,
         views : {
           view: "./certs/Uni_Transcript.pdf",
@@ -216,13 +214,25 @@ I am eager to apply both my financial knowledge and analytical mindset in a prof
   sideProjects: {
     list_project: [
       {
+        name: "MYEquity Research AI",
+        labels: ["Python","Web Scraping","Agno Framework",'Financial AI'],
+        brief_summary:
+  ["Inspired by the limited and fragmented coverage of ASEAN stock markets on platforms such as Bloomberg Terminal and OpenBB, this project aims to build an AI-powered equity research platform focused on ASEAN markets.","The platform aggregates financial statements, news, investment reports, and operational data to enable deeper fundamental stock analysis."," Built with Python and the AGNO framework, it connects LLMs with dedicated retrieval and analysis functions to provide up-to-date, context-aware insights for investors and researchers.\nStarting with the Malaysian stock market, the project aims to gradually expand coverage across other developed ASEAN equity markets."],
+        pic: MYEquityResearcher,
+          views:{
+          view:"",
+          viewText : "",
+          isDownload:false
+        }
+      },
+      {
         name: "Discounted Cash Flow of AVGO",
         labels: ["Excel", "Functions","Financial Model"],
         brief_summary:
-  "Built a discounted cash flow model for Broadcom (AVGO) in Excel, using financial statement inputs, forecast assumptions, and valuation functions to estimate intrinsic value. The model walks through revenue projections, margin assumptions, free cash flow calculation, discounting, and terminal value analysis.",
+  ["Built a discounted cash flow model for Broadcom (AVGO) in Excel, using financial statement inputs, forecast assumptions, and valuation functions to estimate intrinsic value. The model walks through revenue projections, margin assumptions, free cash flow calculation, discounting, and terminal value analysis."],
         pic: dcf,
           views:{
-          view:"/files/DCF_broadcom.",
+          view:"./files/DCF_broadcom.",
           viewText : "Download the File",
           isDownload:true
         }
@@ -231,10 +241,10 @@ I am eager to apply both my financial knowledge and analytical mindset in a prof
         name: "Credit Card Market of Taiwan",
         labels: ["Excel", "VBA", "Pivot Table", "Dashboard"],
         brief_summary:
-  "Built an interactive Excel dashboard analyzing Taiwan’s credit card market using Pivot Tables, VBA automation, and dynamic visualizations. The project provides insights into transaction trends,and consumer spending behavior through automated data processing and user-friendly dashboard interactions.",
+  ["Built an interactive Excel dashboard analyzing Taiwan’s credit card market using Pivot Tables, VBA automation, and dynamic visualizations. The project provides insights into transaction trends,and consumer spending behavior through automated data processing and user-friendly dashboard interactions."],
         pic: creditVideo,
         views:{
-          view:"/files/credit_taiwan.xlsm",
+          view:"./files/credit_taiwan.xlsm",
           viewText : "Download the File",
           isDownload:true
         }
@@ -244,10 +254,10 @@ I am eager to apply both my financial knowledge and analytical mindset in a prof
         labels: ["Excel", "VBA", "Pivot Table", "Dashboard"],
         brief_summary:
 
-  "An Excel dashboard analyzing Taiwan’s rental market with VBA, Pivot Tables, and interactive visuals using data sourced from Sinyi Realty Inc. The project explores rental price patterns, regional differences, property characteristics, and affordability trends.",
+ [ "An Excel dashboard analyzing Taiwan’s rental market with VBA, Pivot Tables, and interactive visuals using data sourced from Sinyi Realty Inc. The project explores rental price patterns, regional differences, property characteristics, and affordability trends."],
         pic: rentalTWVideo,
           views:{
-          view:"/files/rental_taiwan.xlsm",
+          view:"./files/rental_taiwan.xlsm",
           viewText : "Download the File",
           isDownload:true
         }
@@ -256,10 +266,10 @@ I am eager to apply both my financial knowledge and analytical mindset in a prof
         name: "Residential Market in Johor",
         labels: ["PowerBi", "Dashboard"],
         brief_summary:
-          "Prompted by my sister’s interest in the Johor residential market, I built an end-to-end property market analysis project using Python and Power BI. Property data was extracted from PropertyGuru, cleaned and transformed to handle inconsistencies, duplicates, and outliers, before being visualized in an interactive Power BI dashboard showcasing pricing trends, regional differences, and market insights.",
+          ["Prompted by my sister’s interest in the Johor residential market, I built an end-to-end property market analysis project using Python and Power BI. Property data was extracted from PropertyGuru, cleaned and transformed to handle inconsistencies, duplicates, and outliers, before being visualized in an interactive Power BI dashboard showcasing pricing trends, regional differences, and market insights."],
         pic: residentialJBVideo,
           views:{
-          view:"/files/residential_johor_dashboard.pbix",
+          view:"./files/residential_johor_dashboard.pbix",
           viewText : "Download the File",
           isDownload:true
         }

@@ -12,18 +12,26 @@ function SideProjects({input}:{input:sideProjects}){
             </div>
     )
 
-    const ProjectText = ({p}:{p:project}) => (
-           <div className="project_text">
-               <h5>{p.name}</h5>
-               <div>
-                 {p.labels.map((label, idx) =>(
-                    <span key={idx}>{label}</span>
-                 ))}
-               </div>
-               <p>{p.brief_summary}</p>
-           </div>
+    const ProjectText = ({ p }: { p: project }) => (
+    <div className="project_text">
+        <h5>{p.name}</h5>
+
+        <div className="labels">
+        {p.labels.map((label, idx) => (
+            <span key={idx}>{label}</span>
+        ))}
+        </div>
+
+        <div className="summary_list">
+        {p.brief_summary.map((item, idx) => (
+            <p key={idx} className="summary_paragraph">
+            {item}
+            </p>
+        ))}
+        </div>
+    </div>
     )
- 
+    
 
      return (
         <section>

@@ -365,6 +365,20 @@ body {
   letter-spacing: 2px;
 }
 
+.summary_list{
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.summary_paragraph{
+    text-align: left;
+    line-height: 1.8;
+    color: #d1d1d1;
+    font-size: 1.1rem;
+}
+
 .projects-scroll-container {
 
   display:grid;

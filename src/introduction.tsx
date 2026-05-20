@@ -20,7 +20,13 @@ function Introduction({ input }: { input: introduction }) {
         <span>Graduation: {input.graduation_date}</span>
       </p>
       <h4>About Me</h4>
-      <p>{input.brief_intro}</p>
+           <div className="summary_list">
+        {input.brief_intro.map((item, idx) => (
+            <p key={idx} className="summary_paragraph">
+            {item}
+            </p>
+        ))}
+        </div>
     </div>
   )
 
