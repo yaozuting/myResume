@@ -110,7 +110,7 @@ export const myProfile: profileSchema = {
         school_name: "National Taiwan University",
         duration: "2022/9- 2026/6",
         course:"Department of Finance",
-        result : "CGPA : 3.94 / 4.30",
+        result : "CGPA : 3.92 / 4.30",
         img:uniImg,
         views : {
           view: "./certs/graduation cert.pdf",
