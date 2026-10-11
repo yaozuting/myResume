@@ -108,12 +108,12 @@ export const myProfile: profileSchema = {
     list_edu: [
       {
         school_name: "National Taiwan University",
-        duration: "2022/9- Present",
+        duration: "2022/9- 2026/6",
         course:"Department of Finance",
         result : "CGPA : 3.94 / 4.30",
         img:uniImg,
         views : {
-          view: "./certs/Uni_Transcript.pdf",
+          view: "./certs/graduation cert.pdf",
           viewText : 'Download the File',
           isDownload : true
         }
